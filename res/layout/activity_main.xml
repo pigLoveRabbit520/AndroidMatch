@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:background="@drawable/mainbg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+    <ImageButton
+        android:id="@+id/btn_main_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/btn_start_bg"
+        android:contentDescription="@string/start_game"
+        android:src="@drawable/btn_start_fg" />
+    
+    <ImageView
+        android:id="@+id/iv_main_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_main_play"
+        android:contentDescription="@string/app_name"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/bg_title" />
+        
+    <RelativeLayout
+        android:id="@+id/rl_main_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/iv_main_clock"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_clock"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/left_time" />
+
+        <ProgressBar
+            android:id="@+id/proBar_main_leftTime"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_main_clock"
+            android:paddingRight="10dip" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_main_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/btn_main_disrupt"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@drawable/btn_disrupt"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/tv_main_disruptNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/btn_main_tip"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@drawable/btn_tip"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/tv_main_tipNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</RelativeLayout>
